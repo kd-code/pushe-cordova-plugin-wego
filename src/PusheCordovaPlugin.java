@@ -57,7 +57,15 @@ public class PusheCordovaPlugin extends CordovaPlugin {
 
     private void initPushe(){
         Log.d("Pushe","------------in initPushe function------------");
-        Pushe.initialize(this.cordova.getActivity(), true);
+        cordova.getThreadPool().execute(new Runnable() {
+            @Override
+            public void run() {
+                Log.d("Pushe","------------in initPushe function thread ------------");
+                Pushe.initialize(cordova.getActivity(), true);
+            }
+        });
+        
+        
     }
     
     private void subscribe(JSONArray args, CallbackContext callbackContext){
