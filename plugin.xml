@@ -24,8 +24,23 @@
         <source-file src="src/PusheCordovaPlugin.java" target-dir="src/co/ronash/pushe/cordova" />
         <framework src="src/pushebuild.gradle" custom="true" type="gradleReference" />
         <resource-file src="pushe-lib/Pushe.aar" target="libs/Pushe.aar" />
+        <resource-file src="pushe-lib/play-services-base-11.8.0.aar" target="libs/play-services-base-11.8.0.aar" />
+        <resource-file src="pushe-lib/play-services-basement-11.8.0.aar" target="libs/play-services-basement-11.8.0.aar" />
         
         <source-file src="src/android-job-1.2.4.jar" target-dir="libs" />
+        <source-file src="src/support-annotations-26.0.2.jar" target-dir="libs" />
+        <source-file src="src/support-compat-26.0.2.jar" target-dir="libs" />
+        <source-file src="src/support-core-ui-26.0.2.jar" target-dir="libs" />
+        <source-file src="src/support-core-utils-26.0.2.jar" target-dir="libs" />
+        <source-file src="src/support-fragment-26.0.2.jar" target-dir="libs" />
+        <source-file src="src/support-media-compat-26.0.2.jar" target-dir="libs" />
+        <source-file src="src/support-v4-26.0.2.jar" target-dir="libs" />
+        
+        <source-file src="src/play-services-gcm-11.8.0.jar" target-dir="libs" />
+        <source-file src="src/play-services-iid-11.8.0.jar" target-dir="libs" />
+        <source-file src="src/play-services-location-11.8.0.jar" target-dir="libs" />
+        <source-file src="src/play-services-tasks-11.8.0.jar" target-dir="libs" />
+    
         
         <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
@@ -221,8 +236,8 @@
             </receiver>
             
             <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
-            <meta-data android:name="co.ronash.pushe.token" android:value="PUSHE_127954762073"/>
-            <meta-data android:name="co.ronash.pushe.cr" android:value="Tm9uZQ=="/>  
+            <meta-data android:name="co.ronash.pushe.token" android:value="PUSHE_TOKEN"/>
+            <meta-data android:name="co.ronash.pushe.cr" android:value="PUSHE_CR"/>  
         </config-file>
     
     </platform>
