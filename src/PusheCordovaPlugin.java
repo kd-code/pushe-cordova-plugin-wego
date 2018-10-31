@@ -16,7 +16,6 @@ import org.json.JSONException;
 
 import co.ronash.pushe.Pushe;
 import co.ronash.pushe.PusheListenerService;
-import android.util.Log;
 
 public class PusheCordovaPlugin extends CordovaPlugin {
     private static CallbackContext mCallback;
@@ -56,16 +55,7 @@ public class PusheCordovaPlugin extends CordovaPlugin {
     }
 
     private void initPushe(){
-        Log.d("Pushe","------------in initPushe function------------");
-        cordova.getThreadPool().execute(new Runnable() {
-            @Override
-            public void run() {
-                Log.d("Pushe","------------in initPushe function thread ------------");
-                Pushe.initialize(cordova.getActivity(), true);
-            }
-        });
-        
-        
+        Pushe.initialize(this.cordova.getActivity(), true);
     }
     
     private void subscribe(JSONArray args, CallbackContext callbackContext){
@@ -99,7 +89,7 @@ public class PusheCordovaPlugin extends CordovaPlugin {
 
     private void setNotificationOn(CallbackContext callbackContext){
        try {
-            Pushe.setNotificationOn(this.cordova.getActivity());
+            Pushe.setNotificationOff(this.cordova.getActivity());
             callbackContext.success();
         } catch (Exception e) {
             callbackContext.error("Error in Pushe.setNotificationOn(). Error: " + e.getMessage());

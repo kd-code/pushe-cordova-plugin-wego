@@ -8,8 +8,7 @@ console.log("pushe plugin loaded.");
                 console.log("Execution succeeded", result);
              },
              function(result){
-                 alert("Error" + reply);
-                 console.log("Pushe.initialize error" + reply);
+                 /*alert("Error" + reply);*/
              },"PusheCordovaPlugin","initialize",[]);
         
     };
