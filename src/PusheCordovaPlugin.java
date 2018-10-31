@@ -16,6 +16,7 @@ import org.json.JSONException;
 
 import co.ronash.pushe.Pushe;
 import co.ronash.pushe.PusheListenerService;
+import android.util.Log;
 
 public class PusheCordovaPlugin extends CordovaPlugin {
     private static CallbackContext mCallback;
@@ -55,6 +56,7 @@ public class PusheCordovaPlugin extends CordovaPlugin {
     }
 
     private void initPushe(){
+        Log.d("Pushe","------------in initPushe function------------");
         Pushe.initialize(this.cordova.getActivity(), true);
     }
     
