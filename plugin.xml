@@ -236,7 +236,7 @@
             </receiver>
             
             <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
-            <meta-data android:name="co.ronash.pushe.token" android:value="PUSHE_127954762073"/>
+            <meta-data android:name="co.ronash.pushe.token" android:value=""/>
             <meta-data android:name="co.ronash.pushe.cr" android:value="Tm9uZQ=="/>  
         </config-file>
     
